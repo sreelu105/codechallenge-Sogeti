@@ -4,6 +4,7 @@ Done on HP UFT using VB script
 Requirements:
 HP UFT or any other which supports VB script
 
+In UFT:
 Steps:
 1.File-->New-->Test
 2.Choose the name and path-->save
@@ -11,6 +12,14 @@ Steps:
 4.Run the script
 
 Test Case1:
+Launch browser-->Hover 'Services'-->Verify for Automation Text-->Click 'Services'-->Click 'Automation'
+[TC01_script.txt](https://github.com/sreelu105/codechallenge-Sogeti/files/9057482/TC01_script.txt)
+
+Test Case2:
+Launch Browser-->Services-->Automation-->Contact us-Fill the Details
+[TC02_Script.txt](https://github.com/sreelu105/codechallenge-Sogeti/files/9057491/TC02_Script.txt)
+
+Test Case3:
 
 
 API Test
