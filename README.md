@@ -8,19 +8,13 @@ In UFT:
 Steps:
 1.File-->New-->Test
 2.Choose the name and path-->save
-3.Use the script in Action
+3.Use the script in Action-->save
 4.Run the script
 
-Test Case1:
-Launch browser-->Hover 'Services'-->Verify for Automation Text-->Click 'Services'-->Click 'Automation'
-
 Test Case2:
-Launch Browser-->Services-->Automation-->Contact us-Fill the Details
 #Note: Unable to automate Captcha, Captachas are mainly designed to prevent automation or computer interaction.
 But there is possibility to disable Captcha in test environment by using Google’s open-source Captcha widget – reCAPTCHA v2, put in the Site Key and the Secret Key, (known as the test keys).  As a result, all verification requests will pass, and automated UI testing can be conducted seamlessly. 
 
-Test Case3:
-Launch Browser-->click 'Worldwide'-->verify if all the country's links are displayed-->Verify if all links are working 
 
 API Test
 Requirements:
