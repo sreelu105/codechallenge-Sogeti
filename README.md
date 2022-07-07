@@ -38,7 +38,7 @@ Verify the below in the response:
   -"country" is "Germany" and "state" is "Baden-Württemberg".
   -For Post Code "70597" the place name has "Stuttgart Degerloch".
 ![API Testcase1](https://user-images.githubusercontent.com/90183632/177715231-9b770b13-7f8e-4575-9f10-ec11d0f9815b.png)
-![API Testcase1-plc](https:/![API Testcase1](https://user-images.githubusercontent.com/90183632/177715157-2e854401-fefc-4b05-890f-d942b071c4c3.png)
+![API Testcase1-plc](https://user-images.githubusercontent.com/90183632/177717160-f31b2a1f-5592-4d56-a5d6-23a9c5d3bdea.png)
 ![API Testcase1-country](https://user-images.githubusercontent.com/90183632/177545059-668967b0-d0f0-40e3-9ebd-8ae75caaadeb.png)
 
 API Test2:
