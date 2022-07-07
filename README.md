@@ -16,6 +16,8 @@ Launch browser-->Hover 'Services'-->Verify for Automation Text-->Click 'Services
 
 Test Case2:
 Launch Browser-->Services-->Automation-->Contact us-Fill the Details
+#Note: Unable to automate Captcha, Captachas are mainly designed to prevent automation or computer interaction.
+But there is possibility to disable Captcha in test environment by using Google’s open-source Captcha widget – reCAPTCHA v2, put in the Site Key and the Secret Key, (known as the test keys).  As a result, all verification requests will pass, and automated UI testing can be conducted seamlessly. 
 
 Test Case3:
 Launch Browser-->click 'Worldwide'-->verify if all the country's links are displayed-->Verify if all links are working 
