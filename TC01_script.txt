@@ -1,0 +1,24 @@
+
+SystemUtil.Run "https://www.sogeti.com/","chrome.exe"
+
+Set oPage = Browser("title:=Sogeti,provider of technology.*").Page("title:=Sogeti,provider of technology.*")
+
+If oPage.Webelement("html tag:=DIV","class:=wrapper","innertext:=Services").Exist(10)  Then
+
+oPage.Webelement("html tag:=DIV","class:=wrapper","innertext:=Services").FireEvent "OnMouseOver"
+
+oPage.Link("html tag:=A","text:=Automation","index:=0").Click
+
+Set oPage = Browser("title:=Automation").Page("title:=Automation")
+If oPage.Webelement("html tag:=SPAN","innertext:=Automation").Exist(5)  Then
+	Reporter.ReportEvent micPass,"Automation page opened successfully",""
+	If oPage.WebElement("xpath:=(//li[contains(@class,'selected')]/div/span[text()='Services'])[1]").Exist(5) AND oPage.WebElement("xpath://div[@class='mega-navbar refreshed level2']/ul/li[contains(@class,'selected')]/a[text()='Automation']").Exist(5) Then
+		Reporter.ReportEvent micPass,"TestCase1 Passed",""
+	Else
+		Reporter.ReportEvent micFail,"TestCase1 Failed",""
+	End If
+Else
+	Reporter.ReportEvent micFail,"Automation page NOT opened","Please check"
+
+End If
+End If

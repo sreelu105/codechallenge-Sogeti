@@ -1,0 +1,37 @@
+
+SystemUtil.Run "https://www.sogeti.com/","chrome.exe"
+
+Set oPage = Browser("title:=Sogeti,provider of technology").Page("title:=Sogeti,provider of technology")
+oPage.Webelement("innertext:=Worldwide","html tag:=SPAN").Click
+
+Set oLink = Description.Create
+oLink("micclass").value="Link"
+oLink("xpath").value = "//div[@id='country-list-id']/ul/li/a" 
+Set oAllLinks = oPage.ChildObjects(oLink)
+
+iTotalLinks = oAllLinks.Count
+
+For i=0 to iTotalLinks-1
+
+sURL = oAllLinks(i).GetROProperty("url")
+
+Set objWinHTTP = CreateObject("WinHttp.WinHttpRequest.5.1")
+objWinHTTP.Option(WinHttpRequestOption_EnableRedirects)=False
+objWinHTTP.Open "GET", sURL, False
+objWinHTTP.SetRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MyApp 1.0; Windows NT 5.1)"
+
+objWinHTTP.Send
+objWinHTTP.WaitForResponse(10)
+iReturnVal = objWinHTTP.Status
+
+If iReturnVal = 200 Then
+    msgbox "Link - " & sURL & " Exists"
+ElseIf iReturnVal = 404 Then
+    msgbox "Link - " & sURL & " is Broken"
+Else
+    msgbox "Code" - iReturnVal
+End If
+
+Set objWinHTTP = Nothing
+
+End Function

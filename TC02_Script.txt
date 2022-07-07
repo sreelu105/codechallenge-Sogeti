@@ -1,0 +1,34 @@
+
+
+SystemUtil.Run "https://www.sogeti.com/","chrome.exe"
+
+Set oPage = Browser("title:=Sogeti,provider of technology.*").Page("title:=Sogeti,provider of technology.*")
+
+If oPage.Webelement("html tag:=DIV","class:=wrapper","innertext:=Services").Exist(10)  Then
+
+oPage.Webelement("html tag:=DIV","class:=wrapper","innertext:=Services").FireEvent "OnMouseOver"
+
+oPage.Link("html tag:=A","text:=Automation","index:=0").Click
+
+Set oPage = Browser("title:=Automation").Page("title:=Automation")
+If oPage.Webelement("html tag:=SPAN","innertext:=Automation").Exist(5)  Then
+	Reporter.ReportEvent micPass,"Automation page opened successfully",""
+	If oPage.WebElement("class:=Form_Title","innertext:=Contact us:").Exist(10) Then
+		oPage.WebEdit("xpath:=//label[text()='First Name']/following::input[1]").Set "Auto"
+		oPage.WebEdit("xpath:=//label[text()='Last Name']/following::input[1]").Set "Test"
+		oPage.WebEdit("xpath:=//label[text()='Email']/following::input[1]").Set "test@test.com"
+		oPage.WebEdit("xpath:=//label[text()='Company']/following::input[1]").Set  "ABC GmbH"
+		oPage.WebEdit("xpath:=//label[text()='Country']/following::div/select").select "Germany"
+		oPage.WebEdit("xpath:=//label[text()='Message']/following::textarea[1]").Set "Contact form filled"
+		oPage.WebCheckBox("xpath:=//label[text()='Message']/following::input[1]").Click
+		oPage.WebButton("html tag:=BUTTON","innertext:=Submit ").Click
+		Reporter.ReportEvent micPass,"TestCase2 Passed",""
+		
+	Else
+		Reporter.ReportEvent micFail,"Contact us Form does not exist","please check"
+	End If
+Else
+	Reporter.ReportEvent micFail,"Automation page NOT opened","Please check"
+
+End If
+End If
