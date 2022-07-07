@@ -13,14 +13,12 @@ Steps:
 
 Test Case1:
 Launch browser-->Hover 'Services'-->Verify for Automation Text-->Click 'Services'-->Click 'Automation'
-[TC01_script.txt](https://github.com/sreelu105/codechallenge-Sogeti/files/9057482/TC01_script.txt)
 
 Test Case2:
 Launch Browser-->Services-->Automation-->Contact us-Fill the Details
-[TC02_Script.txt](https://github.com/sreelu105/codechallenge-Sogeti/files/9057491/TC02_Script.txt)
 
 Test Case3:
-
+Launch Browser-->click 'Worldwide'-->verify if all the country's links are displayed-->Verify if all links are working 
 
 API Test
 Requirements:
@@ -39,6 +37,18 @@ Verify the below in the response:
   -Response time is bel ow 1s
   -"country" is "Germany" and "state" is "Baden-Württemberg".
   -For Post Code "70597" the place name has "Stuttgart Degerloch".
-![image](https://user-images.githubusercontent.com/90183632/177408693-a56341bd-7d7e-4626-b0c5-6307c56d4494.png)
-![API Testcase1-plc](https://user-images.githubusercontent.com/90183632/177545027-3a6712e7-bf0b-47d3-bb3b-ec51e7070bb9.png)
+![API Testcase1](https://user-images.githubusercontent.com/90183632/177715231-9b770b13-7f8e-4575-9f10-ec11d0f9815b.png)
+![API Testcase1-plc](https:/![API Testcase1](https://user-images.githubusercontent.com/90183632/177715157-2e854401-fefc-4b05-890f-d942b071c4c3.png)
 ![API Testcase1-country](https://user-images.githubusercontent.com/90183632/177545059-668967b0-d0f0-40e3-9ebd-8ae75caaadeb.png)
+
+API Test2:
+Test with Country and Postal code
+-Verify in Response:
+  -Status code is 200 and content type is JSON
+  -Response time is bel ow 1s
+  -Verify placename for eych input
+  ![API Testcase2-ca](https://user-images.githubusercontent.com/90183632/177715873-b17d0e9c-5c8f-41e4-9df3-0d7321dad3e3.png)
+![API Testcase2-us1](https://user-images.githubusercontent.com/90183632/177715904-b4d320a7-5210-45e7-a204-43fe13340abe.png)
+![API Testcase2-us2](https://user-images.githubusercontent.com/90183632/177715909-e2f9dab5-2ddb-47ae-8852-02e81f860695.png)
+
+ 
